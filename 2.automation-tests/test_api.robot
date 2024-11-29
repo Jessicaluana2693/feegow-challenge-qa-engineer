@@ -13,7 +13,7 @@ TestarConexao
     Should Be Equal As Numbers    3    ${resp.json()}[id]
 
 AgendarNovaConsulta
-    ${data}=    Create Dictionary    doctor_id=1     patient_id=1     appointment_date=2024-11-29 10:00:00    status=pending
+    ${data}=    Create Dictionary    doctor_id=1     patient_id=1     appointment_date=2024-11-29 14:30:00    status=pending
     ${resp}=    POST    ${URL}    json=${data}
     Set Global Variable    ${currentID}    ${resp.json()}[id]
     Log To Console    ID: ${resp.json()}[id]
