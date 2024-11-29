@@ -40,9 +40,9 @@ Erro ao cancelar consulta criada nos últimos 5 minutos
 ---
 
 ## Evidências
-Captura de tela 1: Exibição da mensagem de erro ao tentar cancelar uma consulta recém-criada (imagem).
-Captura de tela 2: Lista de consultas agendadas, mostrando que a consulta não foi removida após a tentativa de cancelamento (video).
-Logs de erro (se disponíveis): Logs do sistema indicando a falha ao tentar cancelar a consulta.
+- Captura de tela 1: Exibição da mensagem de erro ao tentar cancelar uma consulta recém-criada (imagem).
+- Captura de tela 2: Lista de consultas agendadas, mostrando que a consulta não foi removida após a tentativa de cancelamento (video).
+- Logs de erro (se disponíveis): Logs do sistema indicando a falha ao tentar cancelar a consulta.
 
 ---
 
