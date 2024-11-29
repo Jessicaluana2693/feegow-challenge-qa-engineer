@@ -1,6 +1,7 @@
 # Bug Report
 
-## Erro ao cancelar consulta criada nos últimos 5 minutos
+## Título do Bug
+### Erro ao cancelar consulta criada nos últimos 5 minutos
 ---
 
 ## Descrição
