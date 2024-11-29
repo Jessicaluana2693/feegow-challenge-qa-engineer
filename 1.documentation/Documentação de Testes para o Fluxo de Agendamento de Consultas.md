@@ -8,33 +8,33 @@ Esta documentação descreve os cenários de teste principais para o fluxo de ag
 ## Cenários de Teste
 ### 1. Agendamento de uma nova consulta para um horário disponível
 #### Descrição: O usuário deve ser capaz de agendar uma consulta em um horário disponível. O sistema deve exibir corretamente os horários disponíveis e permitir que o usuário selecione um horário.
-Entrada Esperada: Horários disponíveis listados corretamente.
-Ação Esperada: O usuário seleciona um horário disponível e confirma o agendamento.
-Saída Esperada: A consulta é agendada com sucesso e a confirmação é exibida.
+- Entrada Esperada: Horários disponíveis listados corretamente.
+- Ação Esperada: O usuário seleciona um horário disponível e confirma o agendamento.
+- Saída Esperada: A consulta é agendada com sucesso e a confirmação é exibida.
 
 ### 2. Cancelamento de uma consulta existente
 #### Descrição: O usuário deve ser capaz de cancelar uma consulta previamente agendada. O sistema deve permitir o cancelamento e remover a consulta da lista de agendamentos.
-Entrada Esperada: Consulta previamente agendada.
-Ação Esperada: O usuário clica no botão "Cancelar" para remover a consulta.
-Saída Esperada: A consulta é cancelada e removida da lista de agendamentos.
+- Entrada Esperada: Consulta previamente agendada.
+- Ação Esperada: O usuário clica no botão "Cancelar" para remover a consulta.
+- Saída Esperada: A consulta é cancelada e removida da lista de agendamentos.
 
 ### 3. Exibição correta de horários disponíveis
 #### Descrição: O sistema deve exibir apenas horários válidos e disponíveis para agendamento. Horários já ocupados não devem ser apresentados como opção.
-Entrada Esperada: Lista de horários disponíveis com base na agenda da clínica.
-Ação Esperada: O usuário consulta os horários e visualiza apenas os horários válidos e disponíveis.
-Saída Esperada: Horários já ocupados não são apresentados.
+- Entrada Esperada: Lista de horários disponíveis com base na agenda da clínica.
+- Ação Esperada: O usuário consulta os horários e visualiza apenas os horários válidos e disponíveis.
+- Saída Esperada: Horários já ocupados não são apresentados.
 
 ### 4. Tentativa de agendamento em um horário já ocupado
 #### Descrição: O sistema deve impedir que o usuário agende uma consulta em um horário já ocupado e exibir uma mensagem de erro apropriada.
-Entrada Esperada: O usuário tenta agendar uma consulta em um horário já ocupado.
-Ação Esperada: O usuário seleciona um horário que já está ocupado e tenta confirmar o agendamento.
-Saída Esperada: O sistema exibe uma mensagem de erro indicando que o horário está indisponível.
+- Entrada Esperada: O usuário tenta agendar uma consulta em um horário já ocupado.
+- Ação Esperada: O usuário seleciona um horário que já está ocupado e tenta confirmar o agendamento.
+- Saída Esperada: O sistema exibe uma mensagem de erro indicando que o horário está indisponível.
 
 ### 5. Restrição de cancelamento de consulta criada recentemente
 #### Descrição: O sistema deve restringir o cancelamento de consultas agendadas recentemente (por exemplo, no mesmo dia ou dentro de um intervalo de tempo restrito).
-**Entrada Esperada:** Uma consulta agendada recentemente (ex: no mesmo dia).
-Ação Esperada: O usuário tenta cancelar a consulta dentro do prazo restrito.
-Saída Esperada: O sistema bloqueia o cancelamento e exibe uma mensagem explicando a restrição.
+- Entrada Esperada: Uma consulta agendada recentemente (ex: no mesmo dia).
+- Ação Esperada: O usuário tenta cancelar a consulta dentro do prazo restrito.
+- Saída Esperada: O sistema bloqueia o cancelamento e exibe uma mensagem explicando a restrição.
 
 ---
 
@@ -74,29 +74,29 @@ A matriz de risco ajuda a priorizar os cenários de teste com base em probabilid
 ---
 ## Análise e Priorização
 1. Tentativa de agendamento em um horário já ocupado
-Probabilidade: Alta (4)
-Impacto: Muito alto (4)
-Pontuação de Risco: 16
-Este é o cenário mais crítico, pois impacta diretamente a integridade do agendamento e pode causar frustração no usuário. A probabilidade de erro é alta, pois é uma falha comum em sistemas de agendamento.
+- Probabilidade: Alta (4)
+- Impacto: Muito alto (4)
+- Pontuação de Risco: 16
+- Este é o cenário mais crítico, pois impacta diretamente a integridade do agendamento e pode causar frustração no usuário. A probabilidade de erro é alta, pois é uma falha comum em sistemas de agendamento.
 2. Agendamento de uma nova consulta para um horário disponível
-Probabilidade: Alta (4)
-Impacto: Alto (3)
-Pontuação de Risco: 12
-Este é outro cenário prioritário, pois a falha no agendamento pode bloquear o principal fluxo de trabalho do sistema. Embora a probabilidade de erro seja alta, a gravidade não é tão intensa quanto o caso anterior.
+- Probabilidade: Alta (4)
+- Impacto: Alto (3)
+- Pontuação de Risco: 12
+- Este é outro cenário prioritário, pois a falha no agendamento pode bloquear o principal fluxo de trabalho do sistema. Embora a probabilidade de erro seja alta, a gravidade não é tão intensa quanto o caso anterior.
 3. Exibição correta de horários disponíveis
-Probabilidade: Moderada (3)
-Impacto: Muito alto (4)
-Pontuação de Risco: 12
+- Probabilidade: Moderada (3)
+- Impacto: Muito alto (4)
+- Pontuação de Risco: 12
 A exibição incorreta de horários disponíveis pode causar grande frustração ao usuário, que pode acabar agendando um horário incorreto, embora não seja um erro de alta probabilidade.
 4. Cancelamento de uma consulta existente
-Probabilidade: Moderada (3)
-Impacto: Alto (3)
-Pontuação de Risco: 9
+- Probabilidade: Moderada (3)
+- Impacto: Alto (3)
+- Pontuação de Risco: 9
 Embora o cancelamento seja uma funcionalidade importante, o impacto da falha aqui seria limitado ao cancelamento de uma consulta. A probabilidade de erro é moderada, pois o cancelamento é um processo mais simples em comparação com o agendamento.
 5. Restrição de cancelamento de consulta criada recentemente
-Probabilidade: Baixa (2)
-Impacto: Muito alto (5)
-Pontuação de Risco: 10
+- Probabilidade: Baixa (2)
+- Impacto: Muito alto (5)
+- Pontuação de Risco: 10
 Embora a probabilidade de falha seja baixa, se o cancelamento não for restrito corretamente, pode causar grandes problemas, como usuários cancelando consultas com muito pouco tempo de antecedência, afetando a organização da clínica.
 
 ---
